@@ -16,11 +16,11 @@ namespace Aesteroids
     void Shoot()
     {
         //Create a new bullet clone
-        GameObject clone = Instaniate(bulletPrefab, Transform position, Transform.rotation);
+        GameObject clone = Instantiate(bulletPrefab, transform.position, transform.rotation);
         //Grab rigidbody from clone
         Rigidbody2D rigid = clone.GetComponent<Rigidbody2D>();
         //Add a force to the bullet (using bulletSpeed)
-        rigid.AddForce(Transform.up * bulletspeed, ForceMode2D.Impulse);
+        rigid.AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
     }
     //Update is called once per frame
     void Update()
